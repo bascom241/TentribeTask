@@ -7,11 +7,11 @@ import connectDb from "../utils/dbConnection";
 // Configuration settings to read dotenv file 
 dotenv.config();
 
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 4000;
 // Default port to 3000 
 
 
-app.listen(port, ()=>{
-    connectDb();
+app.listen(port, async ()=>{
+    await connectDb();
     console.log(`Server is running on port ${port}`)
 })
